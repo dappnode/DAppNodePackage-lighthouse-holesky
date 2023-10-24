@@ -1,6 +1,6 @@
 {
   "name": "lighthouse-holesky.dnp.dappnode.eth",
-  "version": "0.1.20",
+  "version": "0.1.0",
   "upstreamVersion": "v4.5.0",
   "architectures": ["linux/amd64"],
   "upstreamRepo": "sigp/lighthouse",
@@ -8,10 +8,6 @@
   "description": "Lighthouse is an Ethereum Consensus Layer client that connects to other clients to form a resilient and decentralized proof-of-stake blockchain.",
   "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
-  "contributors": [
-    "pablo <pablo@dappnode.io> (https://github.com/pablomendezroyo)",
-    "mgarciate <mgarciate@gmail.com> (https://github.com/mgarciate)"
-  ],
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
     "type": "git",
@@ -28,7 +24,7 @@
   },
   "license": "Apache-2.0",
   "requirements": {
-    "minimumDappnodeVersion": "0.2.58"
+    "minimumDappnodeVersion": "0.2.82"
   },
   "chain": {
     "driver": "ethereum-beacon-chain",

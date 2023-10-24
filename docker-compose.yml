@@ -1,7 +1,6 @@
 version: "3.4"
 services:
   beacon-chain:
-    image: "beacon-chain.lighthouse-holesky.dnp.dappnode.eth:0.1.0"
     build:
       context: beacon-chain
       args:
@@ -9,8 +8,8 @@ services:
     volumes:
       - "beacon-data:/root/.lighthouse"
     ports:
-      - "9504:9504/tcp"
-      - "9504:9504/udp"
+      - "9604:9604/tcp"
+      - "9604:9604/udp"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
@@ -19,11 +18,10 @@ services:
       BEACON_API_PORT: 3500
       HTTP_ENGINE: "http://goerli-geth.dappnode:8551"
       CORSDOMAIN: "http://lighthouse-holesky.dappnode"
-      P2P_PORT: 9504
+      P2P_PORT: 9604
       CHECKPOINT_SYNC_URL: ""
       EXTRA_OPTS: ""
   validator:
-    image: "validator.lighthouse-holesky.dnp.dappnode.eth:0.1.0"
     build:
       context: validator
       args:
