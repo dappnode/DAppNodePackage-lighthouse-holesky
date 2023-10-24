@@ -1,10 +1,10 @@
 {
-  "name": "lighthouse-prater.dnp.dappnode.eth",
+  "name": "lighthouse-holesky.dnp.dappnode.eth",
   "version": "0.1.20",
   "upstreamVersion": "v4.5.0",
   "architectures": ["linux/amd64"],
   "upstreamRepo": "sigp/lighthouse",
-  "shortDescription": "Lighthouse Prater Beacon chain + validator",
+  "shortDescription": "Lighthouse Holesky Beacon chain + validator",
   "description": "Lighthouse is an Ethereum Consensus Layer client that connects to other clients to form a resilient and decentralized proof-of-stake blockchain.",
   "type": "service",
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
@@ -15,14 +15,14 @@
   "categories": ["Blockchain", "ETH2.0"],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dappnode/DAppNodePackage-lighthouse-prater.git"
+    "url": "https://github.com/dappnode/DAppNodePackage-lighthouse-holesky.git"
   },
   "bugs": {
     "url": "https://github.com/sigp/lighthouse/issues"
   },
   "links": {
-    "ui": "http://brain.web3signer-prater.dappnode/",
-    "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-prater#readme",
+    "ui": "http://brain.web3signer-holesky.dappnode/",
+    "homepage": "https://github.com/dappnode/DAppNodePackage-lighthouse-holesky#readme",
     "readme": "https://github.com/sigp/lighthouse/blob/stable/README.md",
     "docs": "https://lighthouse-book.sigmaprime.io/"
   },
@@ -40,11 +40,11 @@
   },
   "globalEnvs": [
     {
-      "envs": ["EXECUTION_CLIENT_PRATER", "MEVBOOST_PRATER"],
+      "envs": ["EXECUTION_CLIENT_HOLESKY", "MEVBOOST_HOLESKY"],
       "services": ["beacon-chain"]
     },
     {
-      "envs": ["MEVBOOST_PRATER"],
+      "envs": ["MEVBOOST_HOLESKY"],
       "services": ["validator"]
     }
   ]

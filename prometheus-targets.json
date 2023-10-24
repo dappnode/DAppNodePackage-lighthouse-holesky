@@ -1,20 +1,16 @@
 [
-    {
-        "labels": {
-            "package": "lighthouse-prater.dnp.dappnode.eth",
-            "service": "beacon-chain.lighthouse-prater.dappnode"
-        },
-        "targets": [
-            "beacon-chain.lighthouse-prater.dappnode:8008"
-        ]
+  {
+    "labels": {
+      "package": "lighthouse-holesky.dnp.dappnode.eth",
+      "service": "beacon-chain.lighthouse-holesky.dappnode"
     },
-    {
-        "labels": {
-            "package": "lighthouse-prater.dnp.dappnode.eth",
-            "service": "validator.lighthouse-prater.dappnode"
-        },
-        "targets": [
-            "validator.lighthouse-prater.dappnode:8008"
-        ]
-    }
+    "targets": ["beacon-chain.lighthouse-holesky.dappnode:8008"]
+  },
+  {
+    "labels": {
+      "package": "lighthouse-holesky.dnp.dappnode.eth",
+      "service": "validator.lighthouse-holesky.dappnode"
+    },
+    "targets": ["validator.lighthouse-holesky.dappnode:8008"]
+  }
 ]
