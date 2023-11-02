@@ -1,7 +1,6 @@
 version: "3.4"
 services:
   beacon-chain:
-    image: "beacon-chain.lighthouse-prater.dnp.dappnode.eth:0.1.0"
     build:
       context: beacon-chain
       args:
@@ -9,8 +8,8 @@ services:
     volumes:
       - "beacon-data:/root/.lighthouse"
     ports:
-      - "9504:9504/tcp"
-      - "9504:9504/udp"
+      - "9604:9604/tcp"
+      - "9604:9604/udp"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
@@ -18,12 +17,11 @@ services:
       DEBUG_LEVEL: info
       BEACON_API_PORT: 3500
       HTTP_ENGINE: "http://goerli-geth.dappnode:8551"
-      CORSDOMAIN: "http://lighthouse-prater.dappnode"
-      P2P_PORT: 9504
+      CORSDOMAIN: "http://lighthouse-holesky.dappnode"
+      P2P_PORT: 9604
       CHECKPOINT_SYNC_URL: ""
       EXTRA_OPTS: ""
   validator:
-    image: "validator.lighthouse-prater.dnp.dappnode.eth:0.1.0"
     build:
       context: validator
       args:
@@ -33,8 +31,8 @@ services:
       - "seccomp:unconfined"
     environment:
       DEBUG_LEVEL: info
-      HTTP_WEB3SIGNER: "http://web3signer.web3signer-prater.dappnode:9000"
-      BEACON_NODE_ADDR: "http://beacon-chain.lighthouse-prater.dappnode:3500"
+      HTTP_WEB3SIGNER: "http://web3signer.web3signer-holesky.dappnode:9000"
+      BEACON_NODE_ADDR: "http://beacon-chain.lighthouse-holesky.dappnode:3500"
       GRAFFITI: validating_from_DAppNode
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
