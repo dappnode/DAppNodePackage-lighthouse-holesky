@@ -4,7 +4,7 @@ services:
     build:
       context: beacon-chain
       args:
-        UPSTREAM_VERSION: v4.5.0
+        UPSTREAM_VERSION: v4.6.0
     volumes:
       - "beacon-data:/root/.lighthouse"
     ports:
@@ -20,11 +20,12 @@ services:
       P2P_PORT: 9604
       CHECKPOINT_SYNC_URL: ""
       EXTRA_OPTS: ""
+    image: "beacon-chain.lighthouse-holesky.dnp.dappnode.eth:0.1.1"
   validator:
     build:
       context: validator
       args:
-        UPSTREAM_VERSION: v4.5.0
+        UPSTREAM_VERSION: v4.6.0
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
@@ -35,5 +36,6 @@ services:
       GRAFFITI: validating_from_DAppNode
       EXTRA_OPTS: ""
       FEE_RECIPIENT_ADDRESS: ""
+    image: "validator.lighthouse-holesky.dnp.dappnode.eth:0.1.1"
 volumes:
   beacon-data: {}
