@@ -1,7 +1,7 @@
 {
   "name": "lighthouse-holesky.dnp.dappnode.eth",
-  "version": "0.1.1",
-  "upstreamVersion": "v4.6.0",
+  "version": "0.1.2",
+  "upstreamVersion": "v5.0.111-exp",
   "architectures": ["linux/amd64"],
   "upstreamRepo": "sigp/lighthouse",
   "shortDescription": "Lighthouse Holesky Beacon chain + validator",
