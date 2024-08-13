@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM sigp/lighthouse:${UPSTREAM_VERSION}-modern
+FROM sigp/lighthouse:${UPSTREAM_VERSION}
 
 # Copy token
 COPY security/api-token.txt /root/.lighthouse/validators/
